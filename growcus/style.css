@@ -486,6 +486,12 @@ body{
     .tabrow p{
         display: none;
     }
+    .setname{
+        width:50px;
+    }
+    .namewrap{
+        gap:0;
+    }
 }
 
 #namesess{
@@ -1490,12 +1496,6 @@ ul li a i{
 }
 .sidebar ul li a i{
     font-style: normal;
-}
-#lihomelink{
-    margin-bottom: -3px;
-}
-#forestlinkli{
-    margin-bottom: -2px;
 }
 
 .soundtoggle{
