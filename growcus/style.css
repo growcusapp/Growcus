@@ -487,10 +487,11 @@ body{
         display: none;
     }
     .setname{
-        width:50px;
+        width:50px !important;
     }
     .namewrap{
         gap:0;
+        display:flex;
     }
 }
 
@@ -545,7 +546,7 @@ body{
     box-sizing: border-box;
     transition: 0.5s ease-in-out;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 h2{
     text-align:center;
@@ -1618,5 +1619,9 @@ ul li a i{
     font-size: .85rem;
     color: #aca2a2;
     white-space: nowrap;
+}
+
+#homelink{
+    margin-bottom:2px;
 }
 
