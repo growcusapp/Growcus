@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description here">
+    <title>Growcus - Focus Timer That Grows Trees</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Growcus is a free focus timer. Stay off distractions while a tree grows, build your forest, and unlock cosmetic tree skins.">
+    <meta name="theme-color" content="#222222">
+
+    <link rel="icon" href="tinywowfavicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    
+    <meta property="og:title" content="Growcus – Focus Timer That Grows Trees">
+    <meta property="og:description" content="Stay focused while a tree grows. Build your forest and unlock tree skins.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://YOUR-DOMAIN/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+        <div class="hammenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    <div class="tabs">
+        <div class="ham-spacer"></div>
+        <button class="tab" id="forest1">FOREST</button>
+        <h1 class="growcuss">Growcus</h1>
+    </div>
+    <div class="focusscreen">
+
+        <span class="soundtoggle">🔊</span>
+        <!-- 🔇 -->
+         <audio class="ambientaudio" src="rain.mp3" loop></audio>
+
+        <div class="onbds">
+            <div class="onbdstep active">
+                <img src="Growcusonbd.png" alt="Growcus" id="growcus">
+                <h2>GROWCUS</h2>
+                <p>Hello, What Should We Call You <input type="text" id="username" maxlength="8"></p>
+                <h6></h6>
+                <button class="nextstep">Next Step</button>
+                <i>1/6</i>
+                
+            </div>
+
+            <div class="onbdstep">
+                <img src="timerintro.gif" alt="tutorial" id="timerintro">
+                <p id="pin2">Select The Time You Want To Focus For And Click 'Plant',</p>
+                <input type="range" min="5" max="60" step="5"   id="onbdpref">
+                <p id="onbddurval">25 min</p>
+                <h6></h6>
+                <button class="nextstep">Next Step</button>
+                <i>2/6</i>
+                
+            </div>
+
+
+            <div class="onbdstep">
+                <div class="onbddead">
+                    <img src="Growcy sad.png" id="growcyonbd">
+                    <img src="deadonbd.png" id="deadonbd">
+                </div>    
+                <p>Leave This Tab For More Than 3 Seconds And Your Tree Dies, So Keep Focusing So It Grows!</p>
+                <h6></h6>
+                <button class="nextstep">Next Step</button>
+                <i>3/6</i>
+                <!-- <button class="btn">dsdas</button> -->
+                
+            </div>
+            <div class="onbdstep">
+                <div class="onbddead">
+                    <img src="Growcus happy.png" id="growcyonbd">
+                    <img src="grownonbd.png" id="deadonbd">
+                </div>
+                <p>Complete The Session And Your Tree Thrives!</p>
+                <h6></h6>
+                <button class="nextstep">Next Step</button>
+                <i>4/6</i>
+            </div>            
+            <div class="onbdstep">
+                <img src="yourforest.png" id="yourforest">
+                <p>Your Forest:<br> Every Tree You Grow Or Lose Is Saved In Your Forest</p>
+                <h6></h6>
+                <button class="nextstep">Next Step</button>
+                <i>5/6</i>
+                <!-- <button class="btn">dsdas</button> -->
+                
+            </div>            
+            <!-- <div class="onbdstep">  
+                <p>Ready to plant your First Tree?</p>
+                <h6></h6>
+                <button class="finalstep">Let's Go!</button>
+                
+            </div> -->
+            <div class="onbdstep">
+                <p class="finaltitle">Ready to plant your first tree?</p>
+                <ul class="finallist">
+                    <li>Pick your focus time</li>
+                    <li>Stay on the tab while it grows</li>
+                    <li>Fill your forest every day</li>
+                </ul>
+                <button class="finalstep">Let's Go!</button>
+            </div>
+        </div>
+
+        <div class="skinpicker">
+            <div class="shandle"></div>
+            <h3 class="stitle">My Skins</h3>
+            <div class="sgrid ownedgrid"></div>
+            <div class="moredivider">More Skins</div>
+            <div class="sgrid moregrid"></div>
+            <p class="pmsg"></p>
+        </div>
+
+        <span class="timer">
+            <div id="settings">
+                <button id="closeset">✓</button>
+                <span id="timertxt2">25:00</span>
+                <div class="timcont">
+                    <button class="minus">-</button>
+                    <input type="range" id="slider" min="1  " max="60" value="25">
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <span id="timertxt">25:00</span>
+        </span>
+        <div class="sessdets">
+            <input type="text" placeholder="Name Your Session" class="namesess" id="namesess" maxlength="8">
+        </div>
+        
+        <div class ="treecont">
+            <div class="glowcirc">
+                <div class="treeic">
+                    <img class="suck" src="grown.png" alt="TREE">
+                </div>
+            </div>
+        </div>
+        <button class="plantbtn">Plant and get started!</button>
+        <button class="pausebtn">Pause</button>
+        <button class="startbtn">End Session</button>
+
+
+
+    </div>
+
+    <div class="sidebar">
+            <big><h2>MENU</h2></big>
+            <img src="defpfp.png" alt="Sorry! Image Broken" class="pfp">
+            <ul>
+                <li id="lihomelink"><a href="#" id="homelink"><i id="iinhomelink">⌂</i>Home</a></li>
+                <li><a href="#" id="settinglink"><i>⚙</i>Settings</a></li>
+                <li id="forestlinkli"><a href="#" id="forestlink"><i>↟↟</i><span id="slabel">Forest</span></a></li>
+                <li><a href="#" id="shoplink"><i>☵</i>Shop</a></li>
+                <li><a href="mailto:growcus.app@gmail.com"><i>✉</i>Contact</a></li>
+            </ul>
+                    
+    </div>    
+    
+    <div class="forest">
+        <!-- SIDEBAR -->
+        <div class="filters">
+            <select name="typefilt" class="typefilt">
+                <option value="all">All</option>
+                <option value="survived">Alive</option>
+                <option value="died">Dead</option>
+            </select>
+            <select name="timefilt" class="timefilt">
+                <option value="all">All Time</option>
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+            </select>
+        </div>
+        <div class="summary">
+            <span>⏱ <b id="total"></b></span>
+            <span>🌳 <b id="alive">0</b></span>
+            <span>🥀 <b id="dead">0</b></span>
+        </div>
+        
+    
+        <div class="grid"></div>
+                
+    </div>
+
+    <!-- SHOP -->
+
+    <div class="shopscreen">
+       
+        <!-- <h3>SHOP</h3> -->
+         <div class="tabrow">
+            <button class="stab active" data-tab="buy">Buy</button>
+            <button class="stab" data-tab="owned">Owned</button>
+            <p>Local Currency Available At Checkout.<br>*Do Not Edit The Email Field On Checkout</p>
+         </div>
+        
+        <div class="shopgrid"></div>
+    </div>
+    
+        <footer class="site-footer">
+            <p>&copy; 2026 Growcus. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="mailto:growcus.app@gmail.com">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </footer>
+
+    <div class="popupend" id="popupend">
+        <div class="popbox">
+            <!-- <img src="#"  id="popimg"> -->
+            <p id="poptxt">YOUR TREE DIED!</p>
+            <img src="" class="treeimgpop" alt="">
+            <p id="popmsg">Better luck next time</p>
+            <button id="popbtn">Continue</button>
+        </div>
+    </div>
+
+    <!-- SETTINGS -->
+
+    <div class="settingscreen">
+        <button class="closesettings">X</button>
+        <div class="setbox">
+            <h2>Settings</h2>
+            <p class="settdet">Account</p>
+            <div class="accsett">
+                <div class="accsettin">
+                    <img src="defpfp.png" class="pfpinacc" alt="">
+                    <div class="txtdet">
+                        <p id="accname">Guest</p>
+                        <span id="accemail">Not signed in</span>
+                    </div>
+                </div>
+                <button id="signout" class="setbtn danger">Sign In</button>
+            </div>
+            <div class="setrow" id="editname">
+                <span>Edit Username:<small>Shown in menu</small></span>
+                <div class="setnamediv">
+                    <input type="text" id="setname" maxlength="8">
+                    <button id="setnamebtn">Change</button>
+                </div>
+            </div>
+            <div class="setrow">
+                <span>Grace Period<small>On: 3 seconds to come back to the tab</small></span>
+                <label class="switch">
+                    <input type="checkbox" id="gracetoggle">
+                    <span class="knob"></span>
+                </label>
+            </div>
+            <div class="setrow">
+                <span>Reset Forest<small>Removes your trees. Skins are kept.</small></span>
+                <button class="setbtn danger" id="setreset" disabled>Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="authscreen">
+        <div class="authbox">
+            <h3>Log In</h3>
+            <button id="cancelauth"><big>✖</big></button>
+            <input type="email" id="email"  placeholder="email@gmail.com">
+            <p id="authmsg"></p>
+            <!-- <button id="magiclink">send verification on email</button>
+            <button id="googleauth">Use Google</button> -->
+            <button id="magiclink" class="authbtn primary">✉   Send Login Link</button>
+            <div class="ordiv">or</div>
+            <button id="googleauth" class="authbtn light"><img src="googleicon.webP" alt="">Continue with Google</button>
+        </div>
+    </div>
+
+    <div class="signoutpopup">
+        <div class="outbox">
+            <h3>Sign out?</h3>
+            <p class="confirmtxt">Your trees stay saved in your account.</p>
+            <button id="yesout">Sign Out</button>
+            <button id="noout" class="ghostbtn">Cancel</button>
+        </div>
+    </div>
+
+    <div class="toast"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+    <script src="index.js"></script>
+    <script src="shop.js"></script>
+    <script src="cloud.js"></script>    
+
+
+</body>
+</html>
