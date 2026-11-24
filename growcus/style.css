@@ -487,14 +487,14 @@ body{
         display: none;
     }
     .setname{
-        width:50px !important;
+        
         flex:1 1 0% !important;
     }
     .namewrap{
         gap:0;
         display:flex;
         flex-wrap:nowrap !important;
-        flex:0;
+        
         flex-direction: row;
     }
 }
