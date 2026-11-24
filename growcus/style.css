@@ -1630,3 +1630,31 @@ ul li a i{
     margin-bottom:2px;
 }
 
+/* Put this at the VERY BOTTOM of your CSS file */
+.namewrap,
+.namewrap * {
+  box-sizing: border-box !important;
+}
+
+.namewrap {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.namewrap input,
+.setname {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  width: auto !important;
+}
+
+.namewrap button {
+  flex: 0 0 auto !important;
+  width: auto !important;
+}
+
