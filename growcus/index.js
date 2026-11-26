@@ -438,6 +438,14 @@ plantbtn.addEventListener('click', ()=>{
     lastdur = slider.value;    
     sessionactive = true;
     swapbtns(plantbtn, [pausebtn, startbtn]);
+    [treevisual, timertxt].forEach(el=>{
+        const c = el === treevisual ? 'planting' : 'settle';
+        el.classList.remove(c);
+        void el.offsetWidth;                 // restart the animation
+        el.classList.add(c);
+        el.addEventListener('animationend', ()=> el.classList.remove(c), { once:true });
+    });
+    showtoast('Breathe in... your tree is growing 🌱');
     clearInterval(countdowninterval)
     totalsec = ttldur;
  
