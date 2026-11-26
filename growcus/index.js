@@ -199,14 +199,16 @@ function timefiltfunc(dstr, per){
 
 function switchtab(){
     if (onbd) return;
-    if (currtab === 'forest') {
-        swapscreen(focsc, forsc);
-        currtab = 'focus';
-        forbtn.textContent = 'FOCUS';
-    } else {
+    const forestShown = getComputedStyle(forsc).display !== 'none';
+    showtoast(forestShown ? 'going to focus' : 'going to forest');   // temporary debug
+    if (forestShown) {
         swapscreen(forsc, focsc);
         currtab = 'forest';
         forbtn.textContent = 'FOREST';
+    } else {
+        swapscreen(focsc, forsc);
+        currtab = 'focus';
+        forbtn.textContent = 'FOCUS';
     }
     sidelabel.textContent = currtab === 'forest' ? 'Forest' : 'Focus';
 }
