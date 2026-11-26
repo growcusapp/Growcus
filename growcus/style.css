@@ -1644,3 +1644,14 @@ ul li a i{
     0%   { opacity:0; transform: translateY(6px); letter-spacing: 6px; }
     100% { opacity:1; transform: none; letter-spacing: normal; }
 }
+
+.shopscreen{
+    position: fixed;          /* or whatever you already use */
+    inset: 0;
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+}
