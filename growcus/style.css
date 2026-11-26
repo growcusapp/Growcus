@@ -1682,8 +1682,8 @@ ul li a i{
 }
 
 /* one font everywhere */
-body, button, input, select, textarea,
-.timer, .tab, .stab, .namecard, .treecard, .plantbtn, .pausebtn, .startbtn,
+button, input, textarea,
+.timer, .tab, .stab, .namecard, .plantbtn, .pausebtn, .startbtn,
 #popbtn, .itemcard button, .sidebar{
     font-family: var(--font);
 }
@@ -1712,7 +1712,7 @@ body, button, input, select, textarea,
 }
 
 /* same card look */
-.treecard, .itemcard, .popbox, .skinpicker{
+.itemcard, .popbox, .skinpicker{
     border-radius: var(--radius-card);
 }
 .itemcard, .popbox{
@@ -1738,17 +1738,4 @@ ul li a{ transition: opacity .2s, transform .2s var(--ease); }
 @keyframes timersettle{
     0%   { opacity:0; transform: translateY(6px); }
     100% { opacity:1; transform: none; }
-}
-
-/* forest tab: undo the consistency layer */
-.forest, .forest .summary, .forest .filters, .forest select, .forest .treecard{
-    font-family: revert;
-}
-.forest .treecard{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 10px;
-    box-shadow: none;
-}
-.forest .treecard:active{
-    transform: none;
 }
