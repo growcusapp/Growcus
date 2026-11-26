@@ -67,6 +67,37 @@ const settscr = document.querySelector('.settingscreen')
 const gracetoggle = document.getElementById('gracetoggle');
 
 
+function swapscreen(from, to){
+    from.classList.add('sfade');
+    from.style.opacity = 0;
+    setTimeout(()=>{
+        from.style.display = 'none';
+        from.style.opacity = '';
+        to.classList.add('sfade');
+        to.style.opacity = 0;
+        to.style.display = 'flex';
+        to.offsetHeight;              // force reflow so the fade runs
+        to.style.opacity = 1;
+    }, 400);
+}
+
+function swapbtns(hide, show){
+    hide.classList.add('bfade');
+    hide.style.opacity = 0;
+    hide.style.transform = 'scale(.95)';
+    setTimeout(()=>{
+        hide.style.display = 'none';
+        hide.style.opacity = '';
+        hide.style.transform = '';
+        show.forEach(b=>{
+            b.classList.add('bfade');
+            b.style.opacity = 0;
+            b.style.display = 'block';
+            b.offsetHeight;
+            b.style.opacity = 1;
+        });
+    }, 450);
+}
 
 function gracems(){
     return localStorage.getItem('grace') === 'off' ? 0 : 3000;
@@ -393,13 +424,10 @@ timefilt.addEventListener('change', rendersess);
 
 
 forbtn.addEventListener('click', ()=>{
-    if (onbd) {
-        return
-    }
-    focsc.style.display = 'none';
-    forsc.style.display = 'flex';
-    rendersess()
-    switchtab()
+    if (onbd) return;
+    rendersess();
+    swapscreen(focsc, forsc);
+    switchtab();
 });
 
 
@@ -410,9 +438,7 @@ plantbtn.addEventListener('click', ()=>{
     ttldur = slider.value*60;
     lastdur = slider.value;    
     sessionactive = true;
-    pausebtn.style.display = 'block';
-    startbtn.style.display = 'block';
-    plantbtn.style.display = 'none';
+    swapbtns(plantbtn, [pausebtn, startbtn]);
     clearInterval(countdowninterval)
     totalsec = ttldur;
  
@@ -638,8 +664,7 @@ document.getElementById('homelink').addEventListener('click', (e) => {
     document.querySelector('.hammenu').classList.remove('active');
     if (typeof shopscr !== 'undefined') shopscr.classList.remove('open');
     if (typeof settscr !== 'undefined') settscr.classList.remove('open');
-    if (typeof forsc !== 'undefined') forsc.style.display = 'none';
-    document.querySelector('.focusscreen').style.display = 'flex';
+    if (forsc.style.display !== 'none') swapscreen(forsc, focsc);
     currtab = 'forest';
     forbtn.textContent = 'FOREST';
     sidelabel.textContent = 'Forest';
