@@ -198,20 +198,15 @@ function timefiltfunc(dstr, per){
 }
 
 function switchtab(){
-    if (onbd) {
-        return
-    }
-    if (currtab==='forest') {
-        focsc.style.display = 'none';
-        forsc.style.display = 'flex';
-        currtab='focus'
-        forbtn.textContent = 'FOCUS'
-    }
-    else{
-        currtab='forest'
+    if (onbd) return;
+    if (currtab === 'forest') {
+        swapscreen(focsc, forsc);
+        currtab = 'focus';
+        forbtn.textContent = 'FOCUS';
+    } else {
+        swapscreen(forsc, focsc);
+        currtab = 'forest';
         forbtn.textContent = 'FOREST';
-        focsc.style.display = 'flex';
-        forsc.style.display = 'none';
     }
     sidelabel.textContent = currtab === 'forest' ? 'Forest' : 'Focus';
 }
@@ -429,7 +424,6 @@ timefilt.addEventListener('change', rendersess);
 forbtn.addEventListener('click', ()=>{
     if (onbd) return;
     rendersess();
-    swapscreen(focsc, forsc);
     switchtab();
 });
 
