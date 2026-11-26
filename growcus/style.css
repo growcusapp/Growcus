@@ -1665,3 +1665,77 @@ ul li a i{
     overscroll-behavior: contain;
     touch-action: pan-y;
 }
+
+/* ===== CONSISTENCY LAYER (keep at the bottom of the file) ===== */
+
+:root{
+    --green: rgb(71, 203, 71);
+    --green-dark: rgb(31, 87, 31);
+    --bg: #222;
+    --card: #313131;
+    --text: aliceblue;
+    --muted: #aca2a2;
+    --radius-card: 20px;
+    --radius-btn: 20px;
+    --ease: cubic-bezier(.2,.8,.2,1);
+    --font: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* one font everywhere */
+body, button, input, select, textarea,
+.timer, .tab, .stab, .namecard, .treecard, .plantbtn, .pausebtn, .startbtn,
+#popbtn, .itemcard button, .sidebar{
+    font-family: var(--font);
+}
+
+/* all main buttons look and feel the same */
+.plantbtn, .pausebtn, .startbtn, #popbtn{
+    background-color: var(--green);
+    border-radius: var(--radius-btn);
+    font-style: normal;
+    font-weight: 800;
+    box-shadow: 0 3px 0 var(--green-dark);
+    transition: transform .15s var(--ease), box-shadow .15s var(--ease), filter .2s;
+}
+.plantbtn:active, .pausebtn:active, .startbtn:active, #popbtn:active{
+    transform: translateY(2px) scale(.98);
+    box-shadow: 0 1px 0 var(--green-dark);
+    filter: brightness(.95);
+}
+
+/* same press feedback on small controls */
+.tab, .stab, .itemcard button, .plus, .minus, .soundtoggle{
+    transition: transform .15s var(--ease), background-color .2s, filter .2s;
+}
+.tab:active, .stab:active, .itemcard button:active, .plus:active, .minus:active{
+    transform: scale(.95);
+}
+
+/* same card look */
+.treecard, .itemcard, .popbox, .skinpicker{
+    border-radius: var(--radius-card);
+}
+.itemcard, .popbox{
+    box-shadow: 0 6px 16px rgba(0,0,0,.35);
+}
+
+/* timer text doesn't jitter */
+#timertxt, #timertxt2{ font-variant-numeric: tabular-nums; }
+
+/* visible keyboard focus, no ugly default outline */
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible{
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+button, a, .tab, .stab{ -webkit-tap-highlight-color: transparent; }
+
+/* consistent menu and screen timing */
+.sidebar{ transition: transform .3s var(--ease); }
+ul li a{ transition: opacity .2s, transform .2s var(--ease); }
+
+/* fixes for earlier issues */
+.popupend{ background: rgba(0,0,0,.6); }
+@keyframes timersettle{
+    0%   { opacity:0; transform: translateY(6px); }
+    100% { opacity:1; transform: none; }
+}
