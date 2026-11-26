@@ -82,21 +82,24 @@ function swapscreen(from, to){
 }
 
 function swapbtns(hide, show){
-    hide.classList.add('bfade');
+    hide.style.transition = 'opacity .5s ease, transform .5s ease';
+    hide.offsetHeight;
     hide.style.opacity = 0;
     hide.style.transform = 'scale(.95)';
     setTimeout(()=>{
         hide.style.display = 'none';
         hide.style.opacity = '';
         hide.style.transform = '';
+        hide.style.transition = '';
         show.forEach(b=>{
-            b.classList.add('bfade');
+            b.style.transition = 'none';
             b.style.opacity = 0;
             b.style.display = 'block';
             b.offsetHeight;
+            b.style.transition = 'opacity .7s ease';
             b.style.opacity = 1;
         });
-    }, 450);
+    }, 500);
 }
 
 function gracems(){
