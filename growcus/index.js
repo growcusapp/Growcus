@@ -380,37 +380,39 @@ function savesession(status, secs){
 
 
 function rendersess(){
+function rendersess(){
     let forest = getforest();
     const forestgrid = document.querySelector(".grid");
-    forestgrid.innerHTML = '';
 
     let typval = typefilt.value;
-    let timval = timefilt.value;    
-    let total = 0
-    let alive = 0
-    let dead = 0
+    let timval = timefilt.value;
+    let total = 0;
+    let alive = 0;
+    let dead = 0;
+    let html = '';
 
     forest.slice().reverse().forEach(tree => {
         if (typval!=='all' && tree.status!== typval) return;
-        if(!timefiltfunc(tree.ts || tree.date, timval))return;
+        if(!timefiltfunc(tree.ts || tree.date, timval)) return;
 
         if (tree.status === 'survived') alive++; else dead++;
         total += tree.focused ?? (tree.status === 'survived' ? (Number(tree.duration) || 0) * 60 : 0);
 
         const sk = shopitems.find(s => s.id === tree.skin) || shopitems[0];
         let icontree = tree.status === 'survived' ? (sk.GD?.[0] || sk.stages[2]) : (sk.GD?.[1] || 'deadonly.png');
-        forestgrid.innerHTML += `<div class="treecard ${tree.status === 'died' ? 'died' : ''}" data-info="${(tree.inputval + ' · ' + tree.date + ' · ' + tree.duration + ' min').replace(/"/g, '&quot;')}">
+        html += `<div class="treecard ${tree.status === 'died' ? 'died' : ''}" data-info="${(tree.inputval + ' · ' + tree.date + ' · ' + tree.duration + ' min').replace(/"/g, '&quot;')}">
         <span class="treedt">${tree.inputval}</span>
-        <img src='${icontree}' class='treeinforest'>
+        <img src='${icontree}' class='treeinforest' loading="lazy">
         <span class="treedt">${tree.date}</span>
         </div>`;
     });
+
+    forestgrid.innerHTML = html;
+
     let mins = Math.round(total / 60);
     let h = Math.floor(mins / 60), m = mins % 60;
-    document.querySelector('.summary').textContent=
-    `⏱ ${h > 0 ? h + 'h ' : ''}${m}m   🌳 ${alive}   🥀 ${dead}`
-    
-
+    document.querySelector('.summary').textContent =
+    `⏱ ${h > 0 ? h + 'h ' : ''}${m}m   🌳 ${alive}   🥀 ${dead}`;
 }
 
 document.querySelector('.grid').addEventListener('click', (e) => {
