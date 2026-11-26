@@ -704,3 +704,9 @@ function showfirsthints() {
     showhint('.treeic', 'Tap to change your tree', 'up');
     showhint('.timer', 'Slide to set your time', 'up');
 }
+
+
+// keep menopen in sync with the real sidebar state before any click handler runs
+document.addEventListener('click', ()=>{
+    menopen = sidebar.classList.contains('active');
+}, true);
