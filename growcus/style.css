@@ -1752,16 +1752,3 @@ ul li a{ transition: opacity .2s, transform .2s var(--ease); }
 }
 
 
-
-.treecard{
-    background:
-        radial-gradient(circle at 50% 52%, rgba(255,255,255,.22), transparent 60%),
-        rgb(44, 177, 4);
-    border: 2px solid rgb(3, 111, 3);
-    border-radius: 14px;
-    padding: 8px 4px 6px;
-    box-shadow: 0 3px 0 rgb(3, 90, 3);
-    font-family: 'Nunito', sans-serif;
-    transition: transform .15s ease, box-shadow .15s ease;
-}
-.treecard:a
