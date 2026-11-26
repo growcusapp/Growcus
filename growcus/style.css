@@ -1631,3 +1631,16 @@ ul li a i{
 .sfade{ transition: opacity .4s ease-in-out; }
 .bfade{ transition: opacity .45s ease, transform .45s ease, box-shadow .3s; }
 .treeic img, #treevisual img{ transition: opacity .6s ease; }
+
+.treeic.planting{ animation: plantgrow 1.6s ease-out; }
+@keyframes plantgrow{
+    0%   { transform: scale(.85); opacity:.3; filter: drop-shadow(0 0 0 rgba(120,255,140,0)); }
+    55%  { transform: scale(1.06); opacity:1; filter: drop-shadow(0 0 28px rgba(120,255,140,.55)); }
+    100% { transform: scale(1);   opacity:1; filter: drop-shadow(0 0 0 rgba(120,255,140,0)); }
+}
+
+#timertxt.settle{ animation: timersettle 1.4s ease-out; }
+@keyframes timersettle{
+    0%   { opacity:0; transform: translateY(6px); letter-spacing: 6px; }
+    100% { opacity:1; transform: none; letter-spacing: normal; }
+}
