@@ -1750,3 +1750,51 @@ ul li a{ transition: opacity .2s, transform .2s var(--ease); }
 .treecard .treeinforest{
     margin: 0 auto;
 }
+
+
+
+.treecard{
+    background:
+        radial-gradient(circle at 50% 55%, rgba(71,203,71,.22), transparent 62%),
+        #2a2d2a;
+    border: 1px solid rgba(71,203,71,.22);
+    border-radius: 14px;
+    padding: 10px 4px 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    font-family: 'Nunito', sans-serif;
+    transition: transform .2s ease, border-color .2s;
+}
+.treecard:active{ transform: scale(.97); }
+
+.treecard.died{
+    background:
+        radial-gradient(circle at 50% 55%, rgba(200,90,90,.18), transparent 62%),
+        #2d2a2a;
+    border-color: rgba(200,90,90,.22);
+}
+
+.treecard .treeinforest{
+    width: 100%;
+    height: 58px;
+    padding: 0;
+    margin: 4px auto;
+    object-fit: contain;
+    transform: none;
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,.45));
+}
+
+.treecard .treedt{
+    margin-left: 0 !important;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    word-break: break-word;
+    color: #e6e6e6;
+    font-weight: 700;
+    font-size: .72rem;
+    letter-spacing: .3px;
+}
+
+@media (max-width: 900px){
+    .treecard .treeinforest{ height: 44px; }
+}
