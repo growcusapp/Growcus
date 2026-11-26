@@ -1628,4 +1628,6 @@ ul li a i{
     white-space: nowrap;
 }
 
-
+.sfade{ transition: opacity .4s ease-in-out; }
+.bfade{ transition: opacity .45s ease, transform .45s ease, box-shadow .3s; }
+.treeic img, #treevisual img{ transition: opacity .6s ease; }
