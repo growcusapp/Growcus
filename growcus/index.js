@@ -68,21 +68,22 @@ const gracetoggle = document.getElementById('gracetoggle');
 
 
 function swapscreen(from, to){
-    from.classList.add('sfade');
+    from.style.transition = 'opacity .2s ease-out';
     from.style.opacity = 0;
     setTimeout(()=>{
         from.style.display = 'none';
         from.style.opacity = '';
-        to.classList.add('sfade');
+        to.style.transition = 'none';
         to.style.opacity = 0;
         to.style.display = 'flex';
-        to.offsetHeight;              // force reflow so the fade runs
+        to.offsetHeight;
+        to.style.transition = 'opacity .25s ease-out';
         to.style.opacity = 1;
-    }, 400);
+    }, 200);
 }
 
 function swapbtns(hide, show){
-    hide.style.transition = 'opacity .5s ease, transform .5s ease';
+    hide.style.transition = 'opacity .25s ease, transform .25s ease';
     hide.offsetHeight;
     hide.style.opacity = 0;
     hide.style.transform = 'scale(.95)';
@@ -96,10 +97,10 @@ function swapbtns(hide, show){
             b.style.opacity = 0;
             b.style.display = 'block';
             b.offsetHeight;
-            b.style.transition = 'opacity .7s ease';
+            b.style.transition = 'opacity .35s ease';
             b.style.opacity = 1;
         });
-    }, 500);
+    }, 250);
 }
 
 function gracems(){
@@ -379,7 +380,6 @@ function savesession(status, secs){
 };
 
 
-function rendersess(){
 function rendersess(){
     let forest = getforest();
     const forestgrid = document.querySelector(".grid");
