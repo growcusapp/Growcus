@@ -1752,3 +1752,18 @@ ul li a{ transition: opacity .2s, transform .2s var(--ease); }
 }
 
 
+
+/* text centered */
+.treecard .treedt{
+    margin-left: 0 !important;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    word-break: break-word;
+}
+
+/* tree nudged to the right (change 6px to move it more or less) */
+.treecard .treeinforest{
+    transform: translateX(6px);
+}
+
