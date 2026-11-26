@@ -1740,16 +1740,7 @@ ul li a{ transition: opacity .2s, transform .2s var(--ease); }
     100% { opacity:1; transform: none; }
 }
 
-.treecard .treedt{
-    margin-left: 0 !important;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    word-break: break-word;
-}
-.treecard .treeinforest{
-    margin: 0 auto;
-}
+
 
 
 
