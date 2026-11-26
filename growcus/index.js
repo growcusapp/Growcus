@@ -201,7 +201,7 @@ function timefiltfunc(dstr, per){
 function switchtab(){
     if (onbd) return;
     const forestShown = getComputedStyle(forsc).display !== 'none';
-    showtoast(forestShown ? 'going to focus' : 'going to forest');   // temporary debug
+    
     if (forestShown) {
         swapscreen(forsc, focsc);
         currtab = 'forest';
@@ -375,7 +375,7 @@ function savesession(status, secs){
     let forest = getforest();
     forest.push({ inputval:namesess.value.toUpperCase(), date: new Date().toLocaleDateString(), ts: Date.now(), status: status, duration: Math.round(ttldur / 60), focused: secs, skin: sessionskin.id});
     saveforest(forest);
-    localStorage.setItem('forest',JSON.stringify(forest));
+    
     plantbtn.innerHTML = "Plant";
 };
 
