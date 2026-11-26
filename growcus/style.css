@@ -1739,3 +1739,16 @@ ul li a{ transition: opacity .2s, transform .2s var(--ease); }
     0%   { opacity:0; transform: translateY(6px); }
     100% { opacity:1; transform: none; }
 }
+
+/* forest tab: undo the consistency layer */
+.forest, .forest .summary, .forest .filters, .forest select, .forest .treecard{
+    font-family: revert;
+}
+.forest .treecard{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.forest .treecard:active{
+    transform: none;
+}
