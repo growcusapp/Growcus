@@ -174,3 +174,13 @@ function showacc(){
 
 showacc();
 
+// re-apply the saved skin once cloud ownership has loaded
+function syncskin(){
+    if (sessionactive) return;
+    const want = buyskin();
+    if (want.id !== sessionskin.id) {
+        sessionskin = want;
+        treevisual.querySelector('img').src = sessionskin.stages[2];
+    }
+}
+setInterval(syncskin, 700);
