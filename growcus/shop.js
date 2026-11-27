@@ -1,15 +1,15 @@
 const shopitems= [
-    {id:'def',name:'Default Tree',price:2, thumb:'grown.png', stages:['sprout.png','young.png','grown.png',], link: "https://whop.com/checkout/plan_s22c2CJmt3BMQ", GD:['grownonly.png','deadonly.png']},
-    {id:'cherry',name:'Cherry Tree',price:2, thumb:'cherrythumb.png', stages:['cherrysprout.png','cherryyoung.png','cherrygrown.png'], link: "https://whop.com/checkout/plan_s22c2CJmt3BMQ", GD:['cherrycardA.png','cherrycardD.png']},
-    {id:'autumn',name:'Autumn Tree',price:2, thumb:'grown.png', stages:['autumnsprout.png','autumnyoung.png','autumngrown.png'], link: "https://whop.com/checkout/plan_NqJsm9Ft0k5aV", GD:['autumncardA.png','autumncardD.png']}, 
-    {id:'pine',name:'Pine Tree',price:2, thumb:'grown.png', stages:['pineprout.png','pineyoung.png','pinegrown.png'], link: "https://whop.com/checkout/plan_IFRl8AlKeFvzo", GD:['pinecardA.png','pinecardD.png'],},
-    {id:'maple',name:'Maple Tree',price:2, thumb:'grown.png', stages:['maplesprout.png','mapleyoung.png','maplegrown.png'], link: "https://whop.com/checkout/plan_vtYUUuTLvIJsq", GD:['maplecardA.png','maplecardD.png'],},
+    {id:'def',name:'Default Tree',price:'$1/₹90', thumb:'grown.png', stages:['sprout.png','young.png','grown.png',], link: "https://whop.com/checkout/plan_s22c2CJmt3BMQ", GD:['grownonly.png','deadonly.png']},
+    {id:'cherry',name:'Cherry Tree',price:'$1/₹90', thumb:'cherrythumb.png', stages:['cherrysprout.png','cherryyoung.png','cherrygrown.png'], link: "https://whop.com/checkout/plan_s22c2CJmt3BMQ", GD:['cherrycardA.png','cherrycardD.png']},
+    {id:'autumn',name:'Autumn Tree',price:'$1/₹90', thumb:'grown.png', stages:['autumnsprout.png','autumnyoung.png','autumngrown.png'], link: "https://whop.com/checkout/plan_NqJsm9Ft0k5aV", GD:['autumncardA.png','autumncardD.png']}, 
+    {id:'pine',name:'Pine Tree',price:'$1/₹90', thumb:'grown.png', stages:['pineprout.png','pineyoung.png','pinegrown.png'], link: "https://whop.com/checkout/plan_IFRl8AlKeFvzo", GD:['pinecardA.png','pinecardD.png'],},
+    {id:'maple',name:'Maple Tree',price:'$1/₹90', thumb:'grown.png', stages:['maplesprout.png','mapleyoung.png','maplegrown.png'], link: "https://whop.com/checkout/plan_vtYUUuTLvIJsq", GD:['maplecardA.png','maplecardD.png'],},
     
-    {id:'bamboo',name:'Bamboo',price:2, thumb:'grown.png', stages:['bamboosprout.png','bambooyoung.png','bamboogrown.png'], link: "https://whop.com/checkout/plan_HV1acvgnzQ6YU", GD:['bamboocardA.png','bamboocardD.png'],},
-    {id:'willow',name:'Willow Tree',price:2, thumb:'grown.png', stages:['willowsprout.png','willowyoung.png','willowgrown.png'], link: "https://whop.com/checkout/plan_emCe3j6FR6Hia", GD:['willowcardA.png','willowcardD.png'],},
-    {id:'sakura',name:'Sakura Tree',price:2, thumb:'grown.png', stages:['sakurasprout.png','sakurayoung.png','sakuragrown.png'], link: "https://whop.com/checkout/plan_wrboFVuKgBolS", GD:['sakuracardA.png','sakuracardD.png'],},
-    {id:'baobab',name:'Baobab Tree',price:2, thumb:'grown.png', stages:['baobabsprout.png','baobabyoung.png','baobabgrown.png'], link: "https://whop.com/checkout/plan_gmnE62NftF910", GD:['baobabcardA.png','baobabcardD.png'],},
-    {id:'palm',name:'Palm Tree',price:2, thumb:'grown.png', stages:['palmsprout.png','palmyoung.png','palmgrown.png'], link: "https://whop.com/checkout/plan_nl6UBl3xfx870", GD:['palmcardA.png','palmcardD.png'],},
+    {id:'bamboo',name:'Bamboo',price:'$1/₹90', thumb:'grown.png', stages:['bamboosprout.png','bambooyoung.png','bamboogrown.png'], link: "https://whop.com/checkout/plan_HV1acvgnzQ6YU", GD:['bamboocardA.png','bamboocardD.png'],},
+    {id:'willow',name:'Willow Tree',price:'$1/₹90', thumb:'grown.png', stages:['willowsprout.png','willowyoung.png','willowgrown.png'], link: "https://whop.com/checkout/plan_emCe3j6FR6Hia", GD:['willowcardA.png','willowcardD.png'],},
+    {id:'sakura',name:'Sakura Tree',price:'$1/₹90', thumb:'grown.png', stages:['sakurasprout.png','sakurayoung.png','sakuragrown.png'], link: "https://whop.com/checkout/plan_wrboFVuKgBolS", GD:['sakuracardA.png','sakuracardD.png'],},
+    {id:'baobab',name:'Baobab Tree',price:'$1/₹90', thumb:'grown.png', stages:['baobabsprout.png','baobabyoung.png','baobabgrown.png'], link: "https://whop.com/checkout/plan_gmnE62NftF910", GD:['baobabcardA.png','baobabcardD.png'],},
+    {id:'palm',name:'Palm Tree',price:'$1/₹90', thumb:'grown.png', stages:['palmsprout.png','palmyoung.png','palmgrown.png'], link: "https://whop.com/checkout/plan_nl6UBl3xfx870", GD:['palmcardA.png','palmcardD.png'],},
 ]   
 
 const ownedgrid = document.querySelector('.ownedgrid')
@@ -106,7 +106,7 @@ function rendershop(){
         <div class="itemcard">
         <img src="${item.stages[2]}">
         <p class='namecard'>${item.name}</p>
-        <p class='pricecard'>$${item.price}</P>
+        <p class='pricecard'>${item.price}</P>
         ${btn}
         </div>
         `
