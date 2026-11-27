@@ -542,8 +542,8 @@ hammenu.addEventListener('click', (e)=>{
 })
 focsc.addEventListener('click', ()=>{
     if (menopen) {
-        sidebar.classList.toggle('active')
-        hammenu.classList.toggle('active')
+        sidebar.classList.remove('active')
+        hammenu.classList.remove('active')
         menopen=false
     }
     else{
@@ -552,8 +552,8 @@ focsc.addEventListener('click', ()=>{
 })
 forsc.addEventListener('click', ()=>{
     if (menopen) {
-        sidebar.classList.toggle('active')
-        hammenu.classList.toggle('active')
+        sidebar.classList.remove('active')
+        hammenu.classList.remove('active')
         menopen=false
     }
     else{
